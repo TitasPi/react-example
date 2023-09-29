@@ -16,7 +16,7 @@ function List() {
   ];
 
   const postsElement = posts.map((post_obj) => 
-    <Post post={post_obj} />
+    <Post key={post_obj.id} post={post_obj} />
   )
   
   return (
