@@ -3,8 +3,8 @@ import React from 'react'
 function Post({ post }) {
   return (
     <div className='card'>
-      <p>{post.title}</p>
-      <p>{post.content}</p>
+      <p>{post.API}</p>
+      <p>{post.Description}</p>
     </div>
   )
 }
