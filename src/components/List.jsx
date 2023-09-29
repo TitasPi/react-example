@@ -1,4 +1,5 @@
 import React from 'react'
+import Post from './Post';
 
 function List() {
   const posts = [
@@ -14,11 +15,8 @@ function List() {
     }
   ];
 
-  const postsElement = posts.map((post) => 
-    <div key={post.id} className='card'>
-      <p>{post.title}</p>
-      <p>{post.content}</p>
-    </div>
+  const postsElement = posts.map((post_obj) => 
+    <Post post={post_obj} />
   )
   
   return (
