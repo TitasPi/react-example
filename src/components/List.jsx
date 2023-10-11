@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Post from './Post';
 import axios from 'axios';
+import { nanoid } from 'nanoid';
 
 function List() {
   // https://api.publicapis.org/random
@@ -24,7 +25,7 @@ function List() {
 
       {
         (posts) ? posts.map(post => (
-          <Post post={post} />
+          <Post post={post} key={nanoid()} />
         )) : 'Loading...'
       }  
     </>
